@@ -2,36 +2,36 @@
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
+		<title>T Solution Comedy</title>
+
+		<!-- Resumen para los motores de búsqueda. -->
+		<meta name="description" content="Ejemplo de PWA con Material Design" />
+
+		<script src="js/registraServiceWorker.js"></script>
+
 		<meta name="viewport" content="width=device-width" />
 
-		<title>PWA con MD</title>
-
-		<meta name="description" content="It Solution for Comedy" />
-
+		<!-- Color de la barra de navegación de Chrome en dispositivos móviles. -->
 		<meta name="theme-color" content="#fffbfe" />
+
+		<!-- Ícono para la página web, que normalmente se pone en la raíz del sitio. Puede ser diferente para cada página. -->
 		<link rel="icon" sizes="32x32" href="favicon.ico" />
+
+		<!-- Configuración de la PWA para Chrome, Edge y Safari. Debe ponerse en todas las páginas. -->
 		<link rel="manifest" href="site.webmanifest" />
 
-		<!-- Configuración de todas las páginas y colores con CSS. -->
-		<link rel="stylesheet" href="css/estilos.css" />
-
-		<!-- Para manejar customized built-in elements en Safari -->
+		<!-- Permite a los navegadores, que como Safari no soportan el estándar completo de custom elementsm, lo cumplan totalmente. Debe ponerse en todas las páginas. -->
 		<script src="ungap/custom-elements.js"></script>
 
 		<!-- Configuración de todas las páginas con JavaSript. -->
 		<script type="module" src="js/configura.js"></script>
+		<link rel="stylesheet" href="css/estilos.css" />
+		<link rel="stylesheet" href="css/transicion_completa.css" />
 	</head>
 
 	<body>
-		<md-top-app-bar class="center-aligned">
-			<h1>IT Solution Comedy</h1>
-
-			<button is="md-menu-button" slot="navigation" onclick="nav.abre()"></button>
-
-			<button type="button" title="Perfil" slot="action" class="md-standard-icon-button avatar">
-				<span class="material-symbols-outlined">account_circle</span>
-			</button>
-		</md-top-app-bar>
+		<h1>IT Solution Comedy</h1>
+		<nav-tab-fixed id="tab"></nav-tab-fixed>
 
 		<main>
 			<section>
@@ -64,7 +64,7 @@
 					</div>
 				</div>
 			</a>
-			
+
 			<a target="_blank" rel="noopener noreferrer" href="proximamente.html">
 				<div class="card">
 					<div class="image">
@@ -77,7 +77,7 @@
 					</div>
 				</div>
 			</a>
-			
+
 			<a target="_blank" rel="noopener noreferrer" href="proximamente.html">
 				<div class="card">
 					<div class="image">

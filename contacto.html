@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>IT Solution Comedy - Contacto</title>
+		<meta name="description" content="IT Solution Comedy - Contacto<" />
+		<meta name="theme-color" content="#fffbfe" />
+		<link rel="icon" sizes="32x32" href="favicon.ico" />
+		<link rel="manifest" href="site.webmanifest" />
+		<!-- Configuración de todas las páginas y colores con CSS. -->
+		<link rel="stylesheet" href="css/estilos.css" />
+		<!-- Para manejar customized built-in elements en Safari -->
+		<script src="ungap/custom-elements.js"></script>
+		<!-- Configuración de todas las páginas con JavaScript. -->
+		<script type="module" src="js/configura.js"></script>
+	</head>
+
+	<body>
+		<form id="form" novalidate onsubmit="procesa(event)">
+			<md-top-app-bar class="center-aligned">
+				<h1>IT Solution Comedy</h1>
+			</md-top-app-bar>
+			<nav-tab-fixed id="tab"></nav-tab-fixed>
+
+			<main>
+				<p>
+					<span class="md-filled-text-field" accesskey="G">
+						<md-select-menu id="selectGenero" required options="opcionesDeGenero" oninput="copiaMensajes()"></md-select-menu>
+						<span>Género *</span>
+						<small id="supportingGenero">Obligatorio</small>
+					</span>
+				</p>
+
+				<p>
+					<button class="md-filled-button" style="width: 100%">Recomendar</button>
+				</p>
+			</main>
+
+			<md-options-menu id="opcionesDeGenero" aria-label="Opciones de género">
+				<span data-value="" title="Selecciona género"></span>
+				<span data-value="pop">Pop</span>
+				<span data-value="reg">Reguetón</span>
+			</md-options-menu>
+
+			<nav-drw></nav-drw>
+		</form>
+
+		<script type="module">
+			import { muestraTextoDeAyuda } from "./lib/js/muestraTextoDeAyuda.js";
+			import { exportaAHtml } from "./lib/js/exportaAHtml.js";
+			import { muestraError } from "./lib/js/muestraError.js";
+
+			function copiaMensajes() {
+				muestraTextoDeAyuda(selectGenero, supportingGenero, "Obligatorio");
+			}
+			exportaAHtml(copiaMensajes);
+
+			/**
+			 * @param {SubmitEvent} evt
+			 */
+			function procesa(evt) {
+				evt.preventDefault();
+				try {
+					copiaMensajes();
+					if (selectGenero.validity.valid) {
+						const genero = selectGenero.value;
+						const resultado = recomienda(genero);
+						alert(resultado);
+					}
+				} catch (e) {
+					muestraError(e);
+				}
+			}
+			exportaAHtml(procesa);
+
+			/** @param {string} genero */
+			function recomienda(genero) {
+				if (genero === "pop") {
+					return "Para el pop te recomiendo a Dua Lipa.";
+				} else if (genero === "reg") {
+					return "Para el reguetón te recomiendo a Bad Bunny.";
+				}
+			}
+		</script>
+	</body>
+</html>

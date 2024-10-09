@@ -15,9 +15,9 @@ export class NavTabFixed extends HTMLElement {
 				Próximamente
 			</a>
 
-			<a id="navtabfixed" ${resaltaSiEstasEn(["/formulario.html"])} href="formulario.html">
+			<a id="navtabfixed" ${resaltaSiEstasEn(["/contacto.html"])} href="contacto.html">
 				<span class="material-symbols-outlined">newspaper</span>
-				Formulario
+				Contacto
 			</a>
 
 			<a ${resaltaSiEstasEn(["/ayuda.html"])} href="ayuda.html">

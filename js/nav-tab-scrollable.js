@@ -16,16 +16,20 @@ export class NavTabScrollable extends HTMLElement {
 				Próximamente
 			</a>
 
-			<a id="navtabfixed" ${resaltaSiEstasEn(["/contacto.html"])} href="contacto.html">
+			<a ${resaltaSiEstasEn(["/contacto.html"])} href="contacto.html">
 				<span class="material-symbols-outlined">newspaper</span>
 				Contacto
+			</a>
+
+			<a ${resaltaSiEstasEn(["/GPS.html"])} href="GPS.html">
+				<span class="material-symbols-outlined">psychology_alt</span>
+				¿Perdido?
 			</a>
 
 			<a ${resaltaSiEstasEn(["/ayuda.html"])} href="ayuda.html">
 				<span class="material-symbols-outlined">help</span>
 				Ayuda
 			</a>
-			
 		`;
 	}
 }

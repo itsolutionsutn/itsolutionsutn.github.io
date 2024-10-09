@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<title>IT Solution Comedy</title>
+
+		<script src="js/registraServiceWorker.js"></script>
+
+		<meta name="viewport" content="width=device-width" />
+		<meta name="theme-color" content="#fffbfe" />
+		<link rel="icon" sizes="32x32" href="favicon.ico" />
+		<link rel="manifest" href="site.webmanifest" />
+		<script src="ungap/custom-elements.js"></script>
+
+		<script type="module" src="js/configura.js"></script>
+		<link rel="stylesheet" href="css/estilos.css" />
+		<link rel="stylesheet" href="css/transicion_pestanas.css" />
+		<link rel="expect" blocking="render" href="#navtab" />
+	</head>
+
+	<body>
+		<md-top-app-bar adicional="tab" headline="headline">
+			<h1 class="center-aligned">IT Solution Comedy</h1>
+		</md-top-app-bar>
+
+		<h1 id="headline" class="center-aligned">IT Solution Comedy</h1>
+
+		<nav-tab-scrollable id="tab"></nav-tab-scrollable>
+
+		<main>
+			<section id="envianos-tu-chiste" class="chistes-section">
+				<h2>¡Envíanos tu chiste!</h2>
+				<p>Nos encanta recibir nuevos chistes sobre informática o tecnología. Adjunta una foto, video o archivo relacionado con tu chiste.</p>
+
+				<!-- Sección de archivos y cámara -->
+				<div>
+					<h3>Adjuntar archivo o video</h3>
+
+					<!-- Foto desde el móvil con icono -->
+					<p>
+						<label for="foto-movil">
+							<span class="material-symbols-outlined">add_a_photo</span>
+							Foto de Móvil
+						</label>
+						<input id="foto-movil" type="file" accept="image/*" capture="camera" />
+					</p>
+
+					<!-- Video desde el móvil con icono -->
+					<p>
+						<label for="video-movil">
+							<span class="material-symbols-outlined">video_camera_back_add</span>
+							Video de Móvil
+						</label>
+						<input id="video-movil" type="file" accept="video/*" />
+					</p>
+
+					<!-- Archivo con icono -->
+					<p>
+						<label for="archivo">
+							<span class="material-symbols-outlined">attach_file_add</span>
+							Adjuntar archivo
+						</label>
+						<input id="archivo" type="file" />
+					</p>
+				</div>
+			</section>
+		</main>
+	</body>
+</html>

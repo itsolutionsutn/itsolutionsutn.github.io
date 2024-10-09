@@ -2,26 +2,31 @@
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
+		<title>IT Solution Comedy - Ayuda</title>
+
+		<script src="js/registraServiceWorker.js"></script>
+
 		<meta name="viewport" content="width=device-width" />
-		<title>IT Solution Comedy - Contacto</title>
-		<meta name="description" content="IT Solution Comedy - Contacto<" />
 		<meta name="theme-color" content="#fffbfe" />
 		<link rel="icon" sizes="32x32" href="favicon.ico" />
 		<link rel="manifest" href="site.webmanifest" />
-		<!-- Configuración de todas las páginas y colores con CSS. -->
-		<link rel="stylesheet" href="css/estilos.css" />
-		<!-- Para manejar customized built-in elements en Safari -->
 		<script src="ungap/custom-elements.js"></script>
-		<!-- Configuración de todas las páginas con JavaScript. -->
+
 		<script type="module" src="js/configura.js"></script>
+		<link rel="stylesheet" href="css/estilos.css" />
+		<link rel="stylesheet" href="css/transicion_pestanas.css" />
+		<link rel="expect" blocking="render" href="#navtab" />
 	</head>
 
 	<body>
 		<form id="form" novalidate onsubmit="procesa(event)">
-			<md-top-app-bar class="center-aligned">
-				<h1>IT Solution Comedy</h1>
-				<nav-tab-scrollable id="tab"></nav-tab-scrollable>
+			<md-top-app-bar adicional="tab" headline="headline">
+				<h1 class="center-aligned">IT Solution Comedy</h1>
 			</md-top-app-bar>
+	
+			<h1 id="headline" class="center-aligned">IT Solution Comedy</h1>
+	
+			<nav-tab-scrollable id="tab"></nav-tab-scrollable>
 
 			<main>
 				<p>
@@ -45,6 +50,7 @@
 
 			<nav-drw></nav-drw>
 		</form>
+
 
 		<script type="module">
 			import { muestraTextoDeAyuda } from "./lib/js/muestraTextoDeAyuda.js";

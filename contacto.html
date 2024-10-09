@@ -2,7 +2,7 @@
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<title>IT Solution Comedy - Ayuda</title>
+		<title>IT Solution Comedy</title>
 
 		<script src="js/registraServiceWorker.js"></script>
 
@@ -23,34 +23,35 @@
 			<md-top-app-bar adicional="tab" headline="headline">
 				<h1 class="center-aligned">IT Solution Comedy</h1>
 			</md-top-app-bar>
-	
-			<h1 id="headline" class="center-aligned">IT Solution Comedy</h1>
-	
+
+			<h1 id="headline" class="center-aligned">IT Solution Comedy - ¿Contacto?</h1>
+
 			<nav-tab-scrollable id="tab"></nav-tab-scrollable>
 
 			<main>
+				<h2>¿Necesitas Contacto? Aquí va una broma en su lugar!</h2>
 				<p>
 					<span class="md-filled-text-field" accesskey="G">
 						<md-select-menu id="selectGenero" required options="opcionesDeGenero" oninput="copiaMensajes()"></md-select-menu>
-						<span>Género *</span>
+						<span>Selecciona tu consulta *</span>
 						<small id="supportingGenero">Obligatorio</small>
 					</span>
 				</p>
 
 				<p>
-					<button class="md-filled-button" style="width: 100%">Recomendar</button>
+					<button class="md-filled-button" style="width: 100%">Enviar</button>
 				</p>
 			</main>
 
 			<md-options-menu id="opcionesDeGenero" aria-label="Opciones de género">
-				<span data-value="" title="Selecciona género"></span>
-				<span data-value="pop">Pop</span>
-				<span data-value="reg">Reguetón</span>
+				<span data-value="" title="Selecciona opción"></span>
+				<span data-value="soporte">Soporte Técnico</span>
+				<span data-value="ventas">Ventas</span>
+				<span data-value="otros">Otros</span>
 			</md-options-menu>
 
 			<nav-drw></nav-drw>
 		</form>
-
 
 		<script type="module">
 			import { muestraTextoDeAyuda } from "./lib/js/muestraTextoDeAyuda.js";
@@ -71,7 +72,7 @@
 					copiaMensajes();
 					if (selectGenero.validity.valid) {
 						const genero = selectGenero.value;
-						const resultado = recomienda(genero);
+						const resultado = respondeConBroma(genero);
 						alert(resultado);
 					}
 				} catch (e) {
@@ -81,11 +82,15 @@
 			exportaAHtml(procesa);
 
 			/** @param {string} genero */
-			function recomienda(genero) {
-				if (genero === "pop") {
-					return "Para el pop te recomiendo a Dua Lipa.";
-				} else if (genero === "reg") {
-					return "Para el reguetón te recomiendo a Bad Bunny.";
+			function respondeConBroma(genero) {
+				if (genero === "soporte") {
+					return "Soporte técnico: ¿Has intentado apagarlo y encenderlo otra vez?";
+				} else if (genero === "ventas") {
+					return "Ventas: ¿Sabías que el aire acondicionado viene sin aire?";
+				} else if (genero === "otros") {
+					return "Otros: El mejor contacto es el que se evita. ¡Suerte!";
+				} else {
+					return "Por favor, selecciona una opción válida.";
 				}
 			}
 		</script>

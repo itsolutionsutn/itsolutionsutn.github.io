@@ -18,7 +18,7 @@ export class NavTabScrollable extends HTMLElement {
 
 			<a ${resaltaSiEstasEn(["/contacto.html"])} href="contacto.html">
 				<span class="material-symbols-outlined">newspaper</span>
-				Contacto
+				¿Contacto?
 			</a>
 
 			<a ${resaltaSiEstasEn(["/GPS.html"])} href="GPS.html">

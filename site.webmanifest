@@ -13,14 +13,14 @@
     "screenshots": [
         {
             "src": "/img/screenshot_horizontal.png",
-            "sizes": "1186x722",
+            "sizes": "1283x786",
             "type": "image/png",
             "form_factor": "wide",
             "label": "IT Solution Comedy"
         },
         {
             "src": "/img/screenshot_vertical.png",
-            "sizes": "510x790",
+            "sizes": "578x769",
             "type": "image/png",
             "form_factor": "narrow",
             "label": "IT Solution Comedy (2)"

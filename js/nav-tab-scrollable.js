@@ -26,9 +26,14 @@ export class NavTabScrollable extends HTMLElement {
 				¿Perdido?
 			</a>
 
-			<a ${resaltaSiEstasEn(["/envianos _un_chiste.html"])} href="envianos _un_chiste.html">
+			<a ${resaltaSiEstasEn(["/envianos_un_chiste.html"])} href="envianos_un_chiste.html">
 				<span class="material-symbols-outlined">celebration</span>
 				¡Envíanos tu chiste!
+			</a>
+
+			<a ${resaltaSiEstasEn(["/mini_stand_up.html"])} href="mini_stand_up.html">
+				<span class="material-symbols-outlined">voice_selection</span>
+				Mini Stand Up
 			</a>
 
 			<a ${resaltaSiEstasEn(["/ayuda.html"])} href="ayuda.html">

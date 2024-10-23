@@ -15,7 +15,7 @@
  * conoce como número menor y se cambia cuando se realizan
  * modificaciones menores.
  */
-const VERSION = "1.93";
+const VERSION = "1.00";
 
 /**
  * Nombre de la carpeta de caché.
@@ -28,11 +28,17 @@ const CACHE = "pwamd";
  */
 const ARCHIVOS = [
 	".htaccess",
+	"archivos copy 2.txt",
 	"archivos.txt",
 	"ayuda.html",
 	"favicon.ico",
 	"index.html",
-	"two-line.html",
+	"instruccionesListadoSw.txt",
+	"jsconfig.json",
+	"renderCliente.html",
+	"renderServidor.html",
+	"site.webmanifest",
+	"sw.js",
 	"css/dark-hc.css",
 	"css/dark-mc.css",
 	"css/dark.css",
@@ -43,8 +49,8 @@ const ARCHIVOS = [
 	"css/transicion_completa.css",
 	"css/transicion_pestanas.css",
 	"img/icono2048.png",
-	"img/maskable_icon.png",
 	"img/img_cards.jpeg",
+	"img/maskable_icon.png",
 	"img/maskable_icon_x128.png",
 	"img/maskable_icon_x192.png",
 	"img/maskable_icon_x384.png",
@@ -60,8 +66,6 @@ const ARCHIVOS = [
 	"js/nav-tab-fixed.js",
 	"js/nav-tab-scrollable.js",
 	"js/registraServiceWorker.js",
-	"lib/css/colors.module.css",
-	"lib/css/elevation.css",
 	"lib/css/material-symbols-outlined.css",
 	"lib/css/md-cards.css",
 	"lib/css/md-fab-primary.css",
@@ -78,13 +82,7 @@ const ARCHIVOS = [
 	"lib/css/md-switch.css",
 	"lib/css/md-tab.css",
 	"lib/css/md-top-app-bar.css",
-	"lib/css/motion.css",
 	"lib/css/roboto.css",
-	"lib/css/shape.css",
-	"lib/css/state.css",
-	"lib/css/theme.dark.css",
-	"lib/css/theme.light.css",
-	"lib/css/typography.css",
 	"lib/fonts/MaterialSymbolsOutlined[FILL,GRAD,opsz,wght].codepoints",
 	"lib/fonts/MaterialSymbolsOutlined[FILL,GRAD,opsz,wght].ttf",
 	"lib/fonts/MaterialSymbolsOutlined[FILL,GRAD,opsz,wght].woff2",
@@ -108,6 +106,16 @@ const ARCHIVOS = [
 	"lib/js/custom/md-slider-field.js",
 	"lib/js/custom/md-top-app-bar.js",
 	"lib/js/custom/MdNavigationDrawer.js",
+	"material-tokens/css/baseline.css",
+	"material-tokens/css/colors.css",
+	"material-tokens/css/elevation.css",
+	"material-tokens/css/motion.css",
+	"material-tokens/css/palette.css",
+	"material-tokens/css/shape.css",
+	"material-tokens/css/state.css",
+	"material-tokens/css/typography.css",
+	"material-tokens/css/theme dark.css",
+	"material-tokens/css/theme light.css",
 	"ungap/custom-elements.js",
 	"/",
 ];

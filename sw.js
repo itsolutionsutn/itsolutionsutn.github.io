@@ -27,6 +27,8 @@ const CACHE = "pwamd";
  * línea.
  */
 const ARCHIVOS = [
+	".htaccess",
+	"archivos.txt",
 	"ayuda.html",
 	"favicon.ico",
 	"index.html",
@@ -45,6 +47,8 @@ const ARCHIVOS = [
 	"css/light.css",
 	"css/transicion_completa.css",
 	"css/transicion_pestanas.css",
+	"error/errorinterno.html",
+	"error/resultadonojson.html",
 	"img/icono2048.png",
 	"img/img_cards.jpeg",
 	"img/maskable_icon.png",
@@ -86,6 +90,7 @@ const ARCHIVOS = [
 	"lib/fonts/roboto-v32-latin-regular.woff2",
 	"lib/js/abreElementoHtml.js",
 	"lib/js/cierraElementoHtmo.js",
+	"lib/js/consumeJson.js",
 	"lib/js/exportaAHtml.js",
 	"lib/js/getAttribute.js",
 	"lib/js/htmlentities.js",
@@ -103,6 +108,9 @@ const ARCHIVOS = [
 	"lib/js/custom/md-slider-field.js",
 	"lib/js/custom/md-top-app-bar.js",
 	"lib/js/custom/MdNavigationDrawer.js",
+	"lib/php/ devuelveJson.php",
+	"lib/php/devuelveResultadoNoJson.php",
+	"lib/php/INTERNAL_SERVER_ERROR.php",
 	"material-tokens/css/baseline.css",
 	"material-tokens/css/colors.css",
 	"material-tokens/css/elevation.css",
@@ -113,6 +121,7 @@ const ARCHIVOS = [
 	"material-tokens/css/typography.css",
 	"material-tokens/css/theme/dark.css",
 	"material-tokens/css/theme/light.css",
+	"srv/lista.php",
 	"ungap/custom-elements.js",
 	"/",
 ];

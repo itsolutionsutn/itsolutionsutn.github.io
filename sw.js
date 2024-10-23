@@ -15,7 +15,7 @@
  * conoce como número menor y se cambia cuando se realizan
  * modificaciones menores.
  */
-const VERSION = "1.91";
+const VERSION = "1.93";
 
 /**
  * Nombre de la carpeta de caché.
@@ -27,12 +27,6 @@ const CACHE = "pwamd";
  * línea.
  */
 const ARCHIVOS = [
-	"css/",
-	"img/",
-	"js/",
-	"lib/",
-	"material-tokens/",
-	"ungap/",
 	".htaccess",
 	"archivos.txt",
 	"ayuda.html",
@@ -40,7 +34,6 @@ const ARCHIVOS = [
 	"index.html",
 	"instruccionesListadoSw.txt",
 	"jsconfig.json",
-	"site.webmanifest",
 	"sw.js",
 	"two-line.html",
 	"css/dark-hc.css",

@@ -46,12 +46,8 @@ const ARCHIVOS = [
 	"css/light.css",
 	"css/transicion_completa.css",
 	"css/transicion_pestanas.css",
-<<<<<<< HEAD
 	"error/errorinterno.html",
 	"error/resultadonojson.html",
-=======
-	"img/Escultura_de_coyote.jpeg",
->>>>>>> parent of c8bcad0 (Fix: Listas S y C)
 	"img/icono2048.png",
 	"img/img_cards.jpeg",
 	"img/maskable_icon.png",
@@ -121,7 +117,6 @@ const ARCHIVOS = [
 	"lib/js/custom/md-overflow-button.js",
 	"lib/js/custom/md-overflow-menu.js",
 	"lib/js/custom/md-select-menu.js",
-<<<<<<< HEAD
 	"lib/js/custom/md-slider-field.js",
 	"lib/js/custom/md-top-app-bar.js",
 	"lib/js/custom/MdNavigationDrawer.js",
@@ -140,8 +135,6 @@ const ARCHIVOS = [
 	"material-tokens/css/theme/light.css",
 	"srv/lista.php",
 	"ungap/custom-elements.js",
-=======
->>>>>>> parent of c8bcad0 (Fix: Listas S y C)
 	"/",
 ];
 

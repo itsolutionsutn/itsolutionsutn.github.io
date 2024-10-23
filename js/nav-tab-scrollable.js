@@ -11,9 +11,14 @@ export class NavTabScrollable extends HTMLElement {
 				Inicio
 			</a>
 
-			<a ${resaltaSiEstasEn(["/two-line.html"])} href="two-line.html">
-				<span class="material-symbols-outlined">newspaper</span>
-				Formulario
+			<a id="navtabfixed" ${resaltaSiEstasEn(["/renderCliente.html"])} href="renderCliente.html">
+				<span class="material-symbols-outlined">list</span>
+				Lista de Chistes C
+			</a>
+			
+			<a id="navtabfixed" ${resaltaSiEstasEn(["/renderServidor.html"])} href="renderServidor.html">
+				<span class="material-symbols-outlined">list</span>
+				Lista de Chistes S
 			</a>
 
 			<a ${resaltaSiEstasEn(["/ayuda.html"])} href="ayuda.html">

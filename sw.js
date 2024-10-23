@@ -15,7 +15,7 @@
  * conoce como número menor y se cambia cuando se realizan
  * modificaciones menores.
  */
-const VERSION = "1.91";
+const VERSION = "1.92";
 
 /**
  * Nombre de la carpeta de caché.
@@ -32,9 +32,10 @@ const ARCHIVOS = [
 	"index.html",
 	"instruccionesListadoSw.txt",
 	"jsconfig.json",
+	"renderCliente.html",
+	"renderServidor.html",
 	"site.webmanifest",
 	"sw.js",
-	"two-line.html",
 	"css/dark-hc.css",
 	"css/dark-mc.css",
 	"css/dark.css",
@@ -44,7 +45,6 @@ const ARCHIVOS = [
 	"css/light.css",
 	"css/transicion_completa.css",
 	"css/transicion_pestanas.css",
-	"img/Escultura_de_coyote.jpeg",
 	"img/icono2048.png",
 	"img/img_cards.jpeg",
 	"img/maskable_icon.png",
@@ -55,21 +55,8 @@ const ARCHIVOS = [
 	"img/maskable_icon_x512.png",
 	"img/maskable_icon_x72.png",
 	"img/maskable_icon_x96.png",
-	"img/pexels-craig-dennis-3701822.jpg",
-	"img/pexels-creative-workshop-3978352.jpg",
-	"img/pexels-erik-karits-3732453.jpg",
-	"img/pexels-esteban-arango-10226903.jpg",
-	"img/pexels-moises-patrício-10961948.jpg",
-	"img/pexels-ralph-2270848.jpg",
-	"img/pexels-rasmus-svinding-35435.jpg",
-	"img/pexels-steve-397857.jpg",
-	"img/pexels-vadim-b-141496.jpg",
 	"img/screenshot_horizontal.png",
-	"img/screenshot_horizontal_2.png",
-	"img/screenshot_horizontal_3.png",
 	"img/screenshot_vertical.png",
-	"img/screenshot_vertical_2.png",
-	"img/screenshot_vertical_3.png",
 	"js/configura.js",
 	"js/nav-bar.js",
 	"js/nav-drw.js",
@@ -113,6 +100,20 @@ const ARCHIVOS = [
 	"lib/js/custom/md-overflow-button.js",
 	"lib/js/custom/md-overflow-menu.js",
 	"lib/js/custom/md-select-menu.js",
+	"lib/js/custom/md-slider-field.js",
+	"lib/js/custom/md-top-app-bar.js",
+	"lib/js/custom/MdNavigationDrawer.js",
+	"material-tokens/css/baseline.css",
+	"material-tokens/css/colors.css",
+	"material-tokens/css/elevation.css",
+	"material-tokens/css/motion.css",
+	"material-tokens/css/palette.css",
+	"material-tokens/css/shape.css",
+	"material-tokens/css/state.css",
+	"material-tokens/css/typography.css",
+	"material-tokens/css/theme/dark.css",
+	"material-tokens/css/theme/light.css",
+	"ungap/custom-elements.js",
 	"/",
 ];
 

@@ -15,7 +15,7 @@
  * conoce como número menor y se cambia cuando se realizan
  * modificaciones menores.
  */
-const VERSION = "1.91";
+const VERSION = "1.92";
 
 /**
  * Nombre de la carpeta de caché.
@@ -47,8 +47,6 @@ const ARCHIVOS = [
 	"css/light.css",
 	"css/transicion_completa.css",
 	"css/transicion_pestanas.css",
-	"error/errorinterno.html",
-	"error/resultadonojson.html",
 	"img/icono2048.png",
 	"img/img_cards.jpeg",
 	"img/maskable_icon.png",
@@ -108,9 +106,6 @@ const ARCHIVOS = [
 	"lib/js/custom/md-slider-field.js",
 	"lib/js/custom/md-top-app-bar.js",
 	"lib/js/custom/MdNavigationDrawer.js",
-	"lib/php/ devuelveJson.php",
-	"lib/php/devuelveResultadoNoJson.php",
-	"lib/php/INTERNAL_SERVER_ERROR.php",
 	"material-tokens/css/baseline.css",
 	"material-tokens/css/colors.css",
 	"material-tokens/css/elevation.css",
@@ -121,7 +116,22 @@ const ARCHIVOS = [
 	"material-tokens/css/typography.css",
 	"material-tokens/css/theme/dark.css",
 	"material-tokens/css/theme/light.css",
-	"srv/lista.php",
+	"rendercli/index.html",
+	"rendercli/jsconfig.json",
+	"rendercli/error/errorinterno.html",
+	"rendercli/error/resultadonojson.html",
+	"rendercli/lib/js/consumeJson.js",
+	"rendercli/lib/js/exportaAHtml.js",
+	"rendercli/lib/js/htmlentities.js",
+	"rendercli/lib/js/muestraError.js",
+	"rendercli/lib/js/ProblemDetails.js",
+	"rendercli/lib/php/ devuelveJson.php",
+	"rendercli/lib/php/ devuelveResultadoNoJson.php",
+	"rendercli/lib/php/INTERNAL_SERVER_ERROR.php",
+	"rendercli/srv/lista.php",
+	"renderserv/index.html",
+	"renderserv/jsconfig.json",
+	"renderserv/srv/render.php",
 	"ungap/custom-elements.js",
 	"/",
 ];

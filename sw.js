@@ -27,18 +27,12 @@ const CACHE = "pwamd";
  * línea.
  */
 const ARCHIVOS = [
-	".htaccess",
-	"archivos copy 2.txt",
-	"archivos.txt",
 	"ayuda.html",
 	"favicon.ico",
 	"index.html",
-	"instruccionesListadoSw.txt",
-	"jsconfig.json",
 	"renderCliente.html",
 	"renderServidor.html",
 	"site.webmanifest",
-	"sw.js",
 	"css/dark-hc.css",
 	"css/dark-mc.css",
 	"css/dark.css",
@@ -114,8 +108,8 @@ const ARCHIVOS = [
 	"material-tokens/css/shape.css",
 	"material-tokens/css/state.css",
 	"material-tokens/css/typography.css",
-	"material-tokens/css/theme dark.css",
-	"material-tokens/css/theme light.css",
+    "material-tokens/css/theme/dark.css",
+    "material-tokens/css/theme/light.css",
 	"ungap/custom-elements.js",
 	"/",
 ];

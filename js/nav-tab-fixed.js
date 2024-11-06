@@ -24,6 +24,14 @@ export class NavTabFixed extends HTMLElement {
 				<span class="material-symbols-outlined">help</span>
 				Ayuda
 			</a>
+			<a ${resaltaSiEstasEn(["/transicion.html"])} href="transicion.html">
+				<span class="material-symbols-outlined">tr</span>
+				Ayuda
+			</a>
+						<a ${resaltaSiEstasEn(["/transicion2.html"])} href="transicion2.html">
+				<span class="material-symbols-outlined">tr2</span>
+				Ayuda
+			</a>
 		`;
 	}
 }

@@ -4,23 +4,38 @@
 		<meta charset="UTF-8" />
 		<title>Lista de Chistes S - IT Solution Comedy</title>
 
+		<!-- Resumen para los motores de búsqueda. -->
+		<meta name="description" content="Ejemplo de PWA con Material Design" />
+
 		<script src="js/registraServiceWorker.js"></script>
 
 		<meta name="viewport" content="width=device-width" />
+
+		<!-- Color de la barra de navegación de Chrome en dispositivos móviles. -->
 		<meta name="theme-color" content="#fffbfe" />
+
+		<!-- Ícono para la página web, que normalmente se pone en la raíz del sitio.
+  Puede ser diferente para cada página. -->
 		<link rel="icon" sizes="32x32" href="favicon.ico" />
+
+		<!-- Configuración de la PWA para Chrome, Edge y Safari.
+  Debe ponerse en todas las páginas. -->
 		<link rel="manifest" href="site.webmanifest" />
+		<!-- Permite a los navegadores, que como Safari no soportan el estándar
+  completo de custom elementsm, lo cumplan totalmente. Debe ponerse en todas
+  las páginas. -->
 		<script src="ungap/custom-elements.js"></script>
 
+		<!-- Configuración de todas las páginas con JavaSript. -->
 		<script type="module" src="js/configura.js"></script>
 		<link rel="stylesheet" href="css/estilos.css" />
 		<link rel="stylesheet" href="css/transicion_pestanas.css" />
+		<link rel="expect" blocking="render" href="#navtabfixed" />
 	</head>
 
 	<body>
-		<nav-tab-fixed id="tab"></nav-tab-fixed>
 
-		<h1 id="headline">Lista de Chistes S - IT Solution Comedy</h1>
+		<nav-tab-fixed id="tab"></nav-tab-fixed>
 
 		<main>
 			<ul class="md-list">
@@ -88,7 +103,5 @@
 				</ul>
 			</footer>
 		</main>
-
-		<nav-drw></nav-drw>
 	</body>
 </html>

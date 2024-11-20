@@ -10,12 +10,12 @@ export class NavTabFixed extends HTMLElement {
 				Inicio
 			</a>
 
-			<a id="navtabfixed" ${resaltaSiEstasEn(["/renderCliente.html"])} href="renderCliente.html">
+			<a id="navtabfixed" ${resaltaSiEstasEn(["/modifica.html"])} href="modifica.html">
 				<span class="material-symbols-outlined">list</span>
 				Lista de Chistec
 			</a>
 			
-			<a id="navtabfixed" ${resaltaSiEstasEn(["/renderServidor.html"])} href="renderServidor.html">
+			<a id="navtabfixed" ${resaltaSiEstasEn(["/agrega.html"])} href="agrega.html">
 				<span class="material-symbols-outlined">list</span>
 				Lista de Chistes
 			</a>

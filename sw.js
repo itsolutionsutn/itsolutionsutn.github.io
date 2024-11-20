@@ -27,11 +27,10 @@ const CACHE = "pwamd";
  * línea.
  */
 const ARCHIVOS = [
-	"ayuda.html",
 	"favicon.ico",
 	"index.html",
-	"renderCliente.html",
-	"renderServidor.html",
+	"modifica.html",
+	"agrega.html",
 	"site.webmanifest",
 	"css/dark-hc.css",
 	"css/dark-mc.css",

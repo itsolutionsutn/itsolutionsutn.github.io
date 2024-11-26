@@ -10,15 +10,10 @@ export class NavTabScrollable extends HTMLElement {
 				<span class="material-symbols-outlined">home</span>
 				Inicio
 			</a>
-
-			<a id="navtabfixed" ${resaltaSiEstasEn(["/modifica.html"])} href="modifica.html">
-				<span class="material-symbols-outlined">list</span>
-				Lista de Chistes C
-			</a>
 			
 			<a id="navtabfixed" ${resaltaSiEstasEn(["/agrega.html"])} href="agrega.html">
-				<span class="material-symbols-outlined">list</span>
-				Lista de Chistes S
+				<span class="material-symbols-outlined">add</span>
+				Agregar
 			</a>
 
 			<a ${resaltaSiEstasEn(["/ayuda.html"])} href="ayuda.html">

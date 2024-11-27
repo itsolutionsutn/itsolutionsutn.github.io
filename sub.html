@@ -100,7 +100,7 @@
 
 			async function preparaVista() {
 				try {
-					await activaNotificacionesPush("sw.js");
+					await activaNotificacionesPush("sw_Copy.js");
 					const suscripcion = await getSuscripcionPush();
 					if (suscripcion === null) {
 						muestraEstado(Estado.DESUSCRITO);

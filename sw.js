@@ -15,7 +15,7 @@
  * conoce como número menor y se cambia cuando se realizan
  * modificaciones menores.
  */
-const VERSION = "1.00";
+const VERSION = "2.10";
 
 /**
  * Nombre de la carpeta de caché.
@@ -113,54 +113,82 @@ const ARCHIVOS = [
 	"/",
 ];
 
-// Verifica si el código corre dentro de un service worker.
+const URL_SERVIDOR = "https://notipush.rf.gd";
+
+// Verifica si el código corre dentro de un service worker
 if (self instanceof ServiceWorkerGlobalScope) {
-	// Evento al empezar a instalar el servide worker,
+	// Evento al empezar a instalar el service worker
 	self.addEventListener("install", (/** @type {ExtendableEvent} */ evt) => {
 		console.log("El service worker se está instalando.");
 		evt.waitUntil(llenaElCache());
 	});
 
-	// Evento al solicitar información a la red.
+	// Evento al solicitar información a la red
 	self.addEventListener("fetch", (/** @type {FetchEvent} */ evt) => {
 		if (evt.request.method === "GET") {
 			evt.respondWith(buscaLaRespuestaEnElCache(evt));
 		}
 	});
 
-	// Evento cuando el service worker se vuelve activo.
+	// Evento cuando el service worker se vuelve activo
 	self.addEventListener("activate", () => console.log("El service worker está activo."));
+
+	// Evento para recibir notificaciones push
+	self.addEventListener("push", (/** @type {PushEvent} */ event) => {
+		const notificacion = event.data;
+		if (notificacion !== null && self.Notification.permission === "granted") {
+			event.waitUntil(muestraNotificacion(notificacion));
+		}
+	});
+
+	// Evento para manejar clics en notificaciones
+	self.addEventListener("notificationclick", (/** @type {NotificationEvent} */ event) => {
+		event.notification.close();
+		event.waitUntil(muestraVentana());
+	});
 }
 
+// Función para llenar el caché
 async function llenaElCache() {
 	console.log("Intentando cargar caché:", CACHE);
-	// Borra todos los cachés.
 	const keys = await caches.keys();
 	for (const key of keys) {
 		await caches.delete(key);
 	}
-	// Abre el caché de este service worker.
 	const cache = await caches.open(CACHE);
-	// Carga el listado de ARCHIVOS.
 	await cache.addAll(ARCHIVOS);
 	console.log("Cache cargado:", CACHE);
 	console.log("Versión:", VERSION);
 }
 
-/** @param {FetchEvent} evt */
+// Función para buscar respuestas en el caché
 async function buscaLaRespuestaEnElCache(evt) {
-	// Abre el caché.
 	const cache = await caches.open(CACHE);
 	const request = evt.request;
-	/* Busca la respuesta a la solicitud en el contenido del caché, sin
-	 * tomar en cuenta la parte después del símbolo "?" en la URL. */
 	const response = await cache.match(request, { ignoreSearch: true });
-	if (response === undefined) {
-		/* Si no la encuentra, empieza a descargar de la red y devuelve
-		 * la promesa. */
-		return fetch(request);
-	} else {
-		// Si la encuentra, devuelve la respuesta encontrada en el caché.
-		return response;
+	return response || fetch(request);
+}
+
+// Función para mostrar una notificación
+/**
+ * @param {PushMessageData} notificacion
+ */
+async function muestraNotificacion(notificacion) {
+	if (self instanceof ServiceWorkerGlobalScope) {
+		const mensaje = notificacion.text();
+		await self.registration.showNotification(mensaje);
+	}
+}
+
+// Función para abrir o enfocar una ventana
+async function muestraVentana() {
+	if (self instanceof ServiceWorkerGlobalScope) {
+		const clientes = await self.clients.matchAll({ type: "window" });
+		for (const cliente of clientes) {
+			if (cliente.url.startsWith(URL_SERVIDOR)) {
+				return cliente.focus();
+			}
+		}
+		return self.clients.openWindow("/");
 	}
 }

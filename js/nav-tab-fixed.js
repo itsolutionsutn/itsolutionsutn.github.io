@@ -10,9 +10,9 @@ export class NavTabFixed extends HTMLElement {
 				Inicio
 			</a>
 			
-			<a id="navtabfixed" ${resaltaSiEstasEn(["/agrega.html"])} href="agrega.html">
-				<span class="material-symbols-outlined">add</span>
-				Agregar
+			<a id="navtabfixed" ${resaltaSiEstasEn(["/sub.html"])} href="sub.html">
+				<span class="material-symbols-outlined">notifications</span>
+				Notificaciones 
 			</a>
 
 			<a ${resaltaSiEstasEn(["/ayuda.html"])} href="ayuda.html">

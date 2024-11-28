@@ -23,20 +23,26 @@
 		<main>
 			<form
 				onsubmit="submitForm('srv/pasatiempo-agrega.php', event)
-    .then(modelo => location.href = 'index.html')
-    .catch(muestraError)"
+					.then(modelo => location.href = 'index.html')
+					.catch(muestraError)"
 			>
+				<md-top-app-bar class="medium material justificado" headline="h1Headline" role="toolbar">
+					
+					<button slot="navigation" type="button" class="md-standard-icon-button" onclick="window.location.href='index.html';">
+						<span class="material-symbols-outlined">arrow_back</span>
+					</button>
+
+					<button type="submit" class="md-standard-icon-button" title="Guardar" slot="action">
+						<span class="material-symbols-outlined">save</span>
+					</button>
+
+					<button type="button" class="md-standard-icon-button" onclick="window.location.href='ayuda.html';" title="Ayuda" slot="action">
+						<span class="material-symbols-outlined">help</span>
+					</button>
+				</md-top-app-bar>
+
 				<h1>Alta</h1>
-				<button class="md-filled-button" type="submit" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; float: right">
-					<span style="line-height: 1; display: inline-block; margin-top: -2px">Guardar</span>
-					<span class="material-symbols-outlined" style="font-size: 1.2rem">save</span>
-				</button>
-				<br><br><br>	
-				<button class="md-outline-button" onclick="window.location.href='ayuda.html';" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; float: right">
-					<span style="line-height: 1; display: inline-block; margin-top: -2px">Ayuda</span>
-					<span class="material-symbols-outlined" style="font-size: 1.2rem">help</span>
-				</button>
-				<br>
+
 				<p>
 					<label>
 						Nota *
@@ -45,13 +51,6 @@
 				</p>
 
 				<p>* Obligatorio</p>
-
-				<p>
-					<a href="index.html" class="md-outline-button" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; float: right; text-decoration: none;">
-						<span style="line-height: 1; display: inline-block; margin-top: -2px">Cancelar</span>
-						<span class="material-symbols-outlined" style="font-size: 1.2rem">cancel</span>
-					</a>
-				</p>
 			</form>
 		</main>
 	</body>

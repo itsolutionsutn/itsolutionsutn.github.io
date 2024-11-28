@@ -27,11 +27,32 @@
 
 		<body
 			onload="if (params.size > 0) {
-			consumeJson('srv/pasatiempo.php?' + params)
-				.then(respuesta => muestraObjeto(forma, respuesta.body))
-				.catch(muestraError)
+				consumeJson('srv/pasatiempo.php?' + params)
+					.then(respuesta => muestraObjeto(forma, respuesta.body))
+					.catch(muestraError)
 			}"
 		>
+		<md-top-app-bar class="medium material justificado" headline="h1Headline" role="toolbar">
+					
+			<button slot="navigation" type="button" class="md-standard-icon-button" onclick="window.location.href='index.html';">
+				<span class="material-symbols-outlined">arrow_back</span>
+			</button>
+
+			<button type="submit" class="md-standard-icon-button" title="Guardar" slot="action">
+				<span class="material-symbols-outlined">save</span>
+			</button>
+
+			<button type="button" class="md-standard-icon-button" onclick="window.location.href='ayuda.html';" title="Ayuda" slot="action">
+				<span class="material-symbols-outlined">help</span>
+			</button>
+
+			<button is="md-overflow-button" slot="action" onclick="overflow.alterna(this)" type="button" class="md-standard-icon-button">
+				<span style="color: var(--md-sys-color-on-surface-variant)" class="material-symbols-outlined">
+					more_vert
+				</span>
+			</button>
+
+		</md-top-app-bar>
 			<main>
 				<form
 					id="forma"
@@ -39,29 +60,12 @@
 					.then(respuesta => location.href = 'index.html')
 					.catch(muestraError)"
 				>
-					<md-top-app-bar class="medium material justificado" headline="h1Headline" role="toolbar">
-						
-						<button slot="navigation" type="button" class="md-standard-icon-button" onclick="window.location.href='index.html';">
-							<span class="material-symbols-outlined">arrow_back</span>
-						</button>
-			
-						<button type="submit" class="md-standard-icon-button" title="Guardar" slot="action">
-							<span class="material-symbols-outlined">save</span>
-						</button>
-			
-						<button type="button" class="md-standard-icon-button" onclick="window.location.href='ayuda.html';" title="Ayuda" slot="action">
-							<span class="material-symbols-outlined">help</span>
-						</button>
-			
-						<button is="md-overflow-button" slot="action" onclick="overflow.alterna(this)" type="button" class="md-standard-icon-button">
-							<span style="color: var(--md-sys-color-on-surface-variant)" class="material-symbols-outlined">
-								more_vert
-							</span>
-						</button>
-			
-					</md-top-app-bar>
-					<h1>Modificar</h1>
+
+
+					<div style="display: flex; justify-content: flex-end; align-items: center; gap: 0.5rem; height: 100px">
 					<input name="id" type="hidden" />
+					<h1>Modificar</h1>
+
 					<br>
 					<p>
 						<label>
@@ -69,9 +73,9 @@
 							<input name="nombre" value="Cargando&hellip;" />
 						</label>
 					</p>
-
+					<br>
 					<p>* Obligatorio</p>
-
+					</div>
 				</form>
 			</main>
 			<md-overflow-menu id="overflow">
@@ -84,7 +88,7 @@
 						.catch(muestraError)
 					}"
 				>
-					<span class="material-symbols-outlined">delete</span>
+					<span class="material-symbols-outlined"> delete</span>
 					Eliminar
 				</button>
 			</md-overflow-menu>

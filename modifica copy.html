@@ -27,40 +27,31 @@
 
 		<body
 			onload="if (params.size > 0) {
-			consumeJson('srv/pasatiempo.php?' + params)
-				.then(respuesta => muestraObjeto(forma, respuesta.body))
-				.catch(muestraError)
-			}"
+   consumeJson('srv/pasatiempo.php?' + params)
+    .then(respuesta => muestraObjeto(forma, respuesta.body))
+    .catch(muestraError)
+  }"
 		>
 			<main>
 				<form
 					id="forma"
 					onsubmit="submitForm('srv/pasatiempo-modifica.php', event)
-					.then(respuesta => location.href = 'index.html')
-					.catch(muestraError)"
+    .then(respuesta => location.href = 'index.html')
+    .catch(muestraError)"
 				>
-					<md-top-app-bar class="medium material justificado" headline="h1Headline" role="toolbar">
-						
-						<button slot="navigation" type="button" class="md-standard-icon-button" onclick="window.location.href='index.html';">
-							<span class="material-symbols-outlined">arrow_back</span>
-						</button>
-			
-						<button type="submit" class="md-standard-icon-button" title="Guardar" slot="action">
-							<span class="material-symbols-outlined">save</span>
-						</button>
-			
-						<button type="button" class="md-standard-icon-button" onclick="window.location.href='ayuda.html';" title="Ayuda" slot="action">
-							<span class="material-symbols-outlined">help</span>
-						</button>
-			
-						<button is="md-overflow-button" slot="action" onclick="overflow.alterna(this)" type="button" class="md-standard-icon-button">
-							<span style="color: var(--md-sys-color-on-surface-variant)" class="material-symbols-outlined">
-								more_vert
-							</span>
-						</button>
-			
-					</md-top-app-bar>
 					<h1>Modificar</h1>
+
+					<div style="display: flex; justify-content: flex-end; align-items: center; gap: 0.5rem; height: 100px">
+						<button class="md-filled-button" type="submit" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem">
+							<span style="line-height: 1; display: inline-block; margin-top: -2px">Guardar</span>
+							<span class="material-symbols-outlined" style="font-size: 1.2rem">save</span>
+						</button>
+						<button is="md-overflow-button" slot="action" onclick="overflow.alterna(this)" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem"></button>
+					</div>
+					<button class="md-outline-button" onclick="window.location.href='ayuda.html';" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; float: right">
+						<span style="line-height: 1; display: inline-block; margin-top: -2px">Ayuda</span>
+						<span class="material-symbols-outlined" style="font-size: 1.2rem">help</span>
+					</button>
 					<input name="id" type="hidden" />
 					<br>
 					<p>
@@ -72,6 +63,12 @@
 
 					<p>* Obligatorio</p>
 
+					<p>
+						<a href="index.html" class="md-outline-button" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; float: right; text-decoration: none;">
+							<span style="line-height: 1; display: inline-block; margin-top: -2px">Cancelar</span>
+							<span class="material-symbols-outlined" style="font-size: 1.2rem">cancel</span>
+						</a>
+					</p>
 				</form>
 			</main>
 			<md-overflow-menu id="overflow">

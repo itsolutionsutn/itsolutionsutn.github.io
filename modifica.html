@@ -63,15 +63,30 @@
 					<h1>Modificar</h1>
 					<input name="id" type="hidden" />
 					<br>
+
 					<p>
-						<label>
-							Nota *
-							<input name="nombre" value="Cargando&hellip;" />
+						<label class="md-filled-text-field">
+							<input required="" placeholder="Nombre*" name="nombre" value="Cargando&hellip;">
+							 <span>Nombre *</span>
+							<small>Obligatorio</small>
 						</label>
 					</p>
-
-					<p>* Obligatorio</p>
-
+	
+					<p>
+						<label class="md-filled-text-field">
+							<input required="" placeholder="Categoria*" name="categoria" value="Cargando&hellip;">
+							 <span>Categoria *</span>
+							<small>Obligatorio</small>
+						</label>
+					</p>
+	
+					<p>
+						<label class="md-filled-text-field">
+							<textarea required="" rows="3" name="descripcion" value="Cargando&hellip;"></textarea>
+							<span>Dirección</span>
+							<small>Obligatorio</small>
+						</label>
+					</p>
 				</form>
 			</main>
 			<md-overflow-menu id="overflow">

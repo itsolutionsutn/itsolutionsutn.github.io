@@ -27,7 +27,7 @@
 					.catch(muestraError)"
 			>
 				<md-top-app-bar class="medium material justificado" headline="h1Headline" role="toolbar">
-					
+
 					<button slot="navigation" type="button" class="md-standard-icon-button" onclick="window.location.href='index.html';">
 						<span class="material-symbols-outlined">arrow_back</span>
 					</button>
@@ -41,16 +41,31 @@
 					</button>
 				</md-top-app-bar>
 
-				<h1>Alta</h1>
+				<h1>Nota nueva</h1>
 
 				<p>
-					<label>
-						Nota *
-						<input name="nombre" />
+					<label class="md-filled-text-field">
+						<input required="" placeholder="Nombre*" name="nombre">
+					 	<span>Nombre *</span>
+						<small>Obligatorio</small>
 					</label>
 				</p>
 
-				<p>* Obligatorio</p>
+				<p>
+					<label class="md-filled-text-field">
+						<input required="" placeholder="Categoria*" name="categoria">
+					 	<span>Categoria *</span>
+						<small>Obligatorio</small>
+					</label>
+				</p>
+
+				<p>
+					<label class="md-filled-text-field">
+						<textarea required="" rows="3" placeholder="Dirección" name="descripcion"></textarea>
+						<span>Dirección</span>
+						<small>Obligatorio</small>
+					</label>
+				</p>
 			</form>
 		</main>
 	</body>
